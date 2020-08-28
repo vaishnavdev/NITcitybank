@@ -11,13 +11,13 @@ import com.nt.service.CustomerService;
 public class SpringDtProj2PasRepoDirectMethodsApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx=null;
+		ApplicationContext ctx1=null;
 		CustomerService service=null;
 		Iterable<CustomerDTO> itDTOs,itDTOs1,itDTOs3=null;
 		//get container
-		ctx=SpringApplication.run(SpringDtProj2PasRepoDirectMethodsApplication.class, args);
+		ctx1=SpringApplication.run(SpringDtProj2PasRepoDirectMethodsApplication.class, args);
 	    //get service class object
-		service=ctx.getBean("custService", CustomerService.class);
+		service=ctx1.getBean("custService", CustomerService.class);
 		//invoke method
 		try {
 			itDTOs=service.fetchAllCustomersSortByProperty("cname", true);
