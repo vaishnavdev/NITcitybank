@@ -46,5 +46,9 @@ public class Customer implements Serializable{
 	public void setBillAmt(double billAmt) {
 		this.billAmt = billAmt;
 	}
+	@Override
+	public String toString() {
+		return "Customer [cno=" + cno + ", cname=" + cname + ", cadd=" + cadd + ", billAmt=" + billAmt + "]";
+	}
 	
 }

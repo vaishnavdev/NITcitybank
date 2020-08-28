@@ -18,7 +18,7 @@ public class SpringDtProj2PasRepoDirectMethodsApplication {
 		ctx1=SpringApplication.run(SpringDtProj2PasRepoDirectMethodsApplication.class, args);
 	    //get service class object
 		service=ctx1.getBean("custService", CustomerService.class);
-		//invoke method
+		/*//invoke method
 		try {
 			itDTOs=service.fetchAllCustomersSortByProperty("cname", true);
 			itDTOs.forEach(System.out::println);
@@ -40,6 +40,13 @@ public class SpringDtProj2PasRepoDirectMethodsApplication {
 			itDTOs3.forEach(System.out::println);
 		}//try
 		catch (Exception e) {
+			e.printStackTrace();
+		}//catch
+		*/		
+		try {
+			service.fetchCustomerrecordsByPagination(5);
+		}//
+		catch(Exception e) {
 			e.printStackTrace();
 		}//catch
 	}//main(-)
